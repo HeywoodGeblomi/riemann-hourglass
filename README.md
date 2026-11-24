@@ -33,3 +33,15 @@ These binaries could not be uploaded: the GitHub connector used here accepts tex
 - `prev_with_percent/ONEPAGER_riemann_hourglass.png`
 - `phase2/out/plot_data.npz`
 - `phase2/out/zeros_t.npy`
+
+## Restoring large and binary files
+
+The one-pager PDFs and PNGs, plus `phase2/out/plot_data.npz` and `phase2/out/zeros_t.npy`, could not be stored as binary blobs through the connector used to publish this repo. They are here as base64 text in matching `*.b64` files.
+
+`BINARIES.sha256` lists the sha256 of each original file. To restore those originals, run:
+
+```
+python3 restore_binaries.py
+```
+
+That script uses only the Python standard library. It decodes the base64 files, writes the original paths, and checks each sha256.
