@@ -1,1 +1,1 @@
-$file:/workspace/publish_staging/addback/riemann-hourglass/phase2/out/CLAIM.txt
+The average-height equation is found if, and only if, there is a minimal relation, not equivalent to the Riemann-von Mangoldt formula or the explicit formula, that is built from the heights t_n and k log p defined in this report, that fails if the primes are removed, and that locates the first 1000 non-trivial zero ordinates to a pre-registered error; it is missed if every such candidate either reduces to one of those two known identities or fails that location test.

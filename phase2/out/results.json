@@ -1,1 +1,327 @@
-$file:/workspace/publish_staging/addback/riemann-hourglass/phase2/out/results.json
+{
+  "author": "Heywood Geblomi",
+  "date_et": "2026-11-21",
+  "n_zeros": 1000,
+  "dps": 30,
+  "definitions": {
+    "height_unentropic_zeros": "Im(rho) for a non-trivial zero rho of xi (equivalently of zeta).",
+    "height_entropic_primes": "k log p for a prime power p^k, as in the Chebyshev function psi(x).",
+    "average_height_density": "n_bar(T) = (1/(2 pi)) log(T/(2 pi)), the derivative of N_sm.",
+    "N_sm_formula": "N_sm(T) = (T/(2 pi)) log(T/(2 pi e)) + 7/8",
+    "average_height_equation": "N(T) = N_sm(T) + S(T) + R(T), with S(T) = (1/pi) arg zeta(1/2+iT) (T not an ordinate) and R(T) = O(1/T). This is the Riemann-von Mangoldt formula.",
+    "lock": "xi(s) = xi(1-s)",
+    "is_new": false,
+    "reduces_to": "Riemann-von Mangoldt / the explicit formula"
+  },
+  "landmarks": {
+    "t_1": 14.134725141734695,
+    "t_10": 49.7738324776723,
+    "t_100": 236.5242296658162,
+    "t_1000": 1419.4224809459956,
+    "N_sm(t_1)": 0.4492778727433185,
+    "N_sm(t_1000)": 999.4178040036278,
+    "N_theta(t_1)": 0.44974717053130886,
+    "N_theta(t_1000)": 999.4178086755674,
+    "mean_spacing_near_t_1000": 1.1592318413594411,
+    "actual_spacing_t999_t1000": 0.7255170935434307
+  },
+  "residuals_at_zeros_using_n_minus_half": {
+    "N_sm": {
+      "name": "N_sm",
+      "rms": 0.25917081661005253,
+      "mean": -0.00017376064133892854,
+      "max_abs": 0.7342587270896956,
+      "p50_abs": 0.1857728985192395,
+      "p95_abs": 0.48507929009548684,
+      "first": 0.050722127256681515,
+      "last": 0.08219599637220654
+    },
+    "N_sm_plus_1_over_48piT": {
+      "name": "N_sm2",
+      "rms": 0.2591707435949997,
+      "mean": -0.0001891526542773927,
+      "max_abs": 0.7342534954630082,
+      "p50_abs": 0.18579102220140697,
+      "p95_abs": 0.48508804660382876,
+      "first": 0.05025296666843759,
+      "last": 0.08219132443275612
+    },
+    "N_theta": {
+      "name": "N_theta",
+      "rms": 0.25917074357279873,
+      "mean": -0.00018915293666136844,
+      "max_abs": 0.7342534954628945,
+      "p50_abs": 0.18579102222179955,
+      "p95_abs": 0.4850880466048974,
+      "first": 0.05025282946869114,
+      "last": 0.08219132443264243
+    },
+    "N_BerryKeating_area": {
+      "name": "N_BK",
+      "rms": 0.28781583059772137,
+      "mean": -0.12517376064133892,
+      "max_abs": 0.8515472707545086,
+      "p50_abs": 0.21129492944942285,
+      "p95_abs": 0.5577583549606459,
+      "first": -0.07427787274331843,
+      "last": -0.04280400362779346
+    },
+    "N_theta_minus_N_sm": {
+      "name": "theta-sm",
+      "rms": 3.1378601641302476e-05,
+      "mean": 1.5392295322439742e-05,
+      "max_abs": 0.0004692977879903748,
+      "p50_abs": 8.16705016859487e-06,
+      "p95_abs": 4.5466597771692776e-05,
+      "first": 0.0004692977879903748,
+      "last": 4.671939564104832e-06
+    },
+    "N_theta_minus_N_sm2": {
+      "name": "theta-sm2",
+      "rms": 4.651604303470084e-09,
+      "mean": 2.8238397553614904e-10,
+      "max_abs": 1.3719974645276523e-07,
+      "p50_abs": 7.389644451905042e-13,
+      "p95_abs": 1.2467928911519232e-10,
+      "first": 1.3719974645276523e-07,
+      "last": 1.1368683772161603e-13
+    },
+    "convention": "N jumps at each t_n. We compare n-1/2 to the continuous approximations evaluated at t_n. That is the midpoint of the jump."
+  },
+  "explicit_formula_psi0": {
+    "formula": "psi0(x) = x - sum_rho x^rho/rho - log(2 pi) - (1/2) log(1-x^{-2})",
+    "zeros_used": "first 1000 non-trivial zeros, taken on the critical line",
+    "rows": [
+      {
+        "x": 20,
+        "psi0_exact": 19.265658314547977,
+        "explicit_from_1000_zeros": 19.28120660248438,
+        "abs_error": 0.015548287936404392,
+        "rel_error": 0.0008070468022711424
+      },
+      {
+        "x": 50,
+        "psi0_exact": 49.48538079241837,
+        "explicit_from_1000_zeros": 49.49015785763877,
+        "abs_error": 0.004777065220402221,
+        "rel_error": 9.653487846119824e-05
+      },
+      {
+        "x": 100,
+        "psi0_exact": 94.0453112293574,
+        "explicit_from_1000_zeros": 94.01134898404344,
+        "abs_error": -0.033962245313958306,
+        "rel_error": -0.00036112640672889365
+      },
+      {
+        "x": 200,
+        "psi0_exact": 206.14585682505478,
+        "explicit_from_1000_zeros": 206.01760058579168,
+        "abs_error": -0.12825623926309504,
+        "rel_error": -0.0006221625854549161
+      },
+      {
+        "x": 500,
+        "psi0_exact": 501.6521166497476,
+        "explicit_from_1000_zeros": 502.0926023372103,
+        "abs_error": 0.440485687462683,
+        "rel_error": 0.0008780700267038426
+      },
+      {
+        "x": 1000,
+        "psi0_exact": 996.6809122471753,
+        "explicit_from_1000_zeros": 997.030216395646,
+        "abs_error": 0.34930414847065094,
+        "rel_error": 0.00035046738046090326
+      },
+      {
+        "x": 2000,
+        "psi0_exact": 1994.4515799780786,
+        "explicit_from_1000_zeros": 1992.7544409955292,
+        "abs_error": -1.6971389825494043,
+        "rel_error": -0.0008509301502160598
+      },
+      {
+        "x": 5000,
+        "psi0_exact": 4997.959692237907,
+        "explicit_from_1000_zeros": 4996.1434776674505,
+        "abs_error": -1.8162145704563954,
+        "rel_error": -0.0003633912000685143
+      },
+      {
+        "x": 10000,
+        "psi0_exact": 10013.39669326311,
+        "explicit_from_1000_zeros": 10018.073296175979,
+        "abs_error": 4.676602912868475,
+        "rel_error": 0.00046703461933300173
+      }
+    ]
+  },
+  "hilbert_polya": {
+    "status": "open",
+    "finite_diagonal_likeness": "The real diagonal matrix diag(t_1,...,t_N) is Hermitian and has those eigenvalues by construction. It takes the zeros as input, so it does not explain them. Any Hermitian matrix with the same eigenvalues is unitarily similar to this one. This is a likeness, not an operator discovered from another rule.",
+    "berry_keating_xp": {
+      "what_was_tested": "The area of the standard xp cutoff region, in units of 2 pi, equals (T/2 pi) log(T/(2 pi e)) + 1.",
+      "comparison": "This matches N_sm except the constant is 1 rather than 7/8. The difference is exactly 1/8, the next constant in the Riemann-Siegel expansion after the area term. The area count does not produce S(T) or the individual t_n.",
+      "rms_residual_vs_n_minus_half": {
+        "name": "N_BK",
+        "rms": 0.28781583059772137,
+        "mean": -0.12517376064133892,
+        "max_abs": 0.8515472707545086,
+        "p50_abs": 0.21129492944942285,
+        "p95_abs": 0.5577583549606459,
+        "first": -0.07427787274331843,
+        "last": -0.04280400362779346
+      },
+      "constant_difference_vs_N_sm": 0.125
+    },
+    "report_status": "likeness of the average, not a real operator"
+  },
+  "prym_example_matrix": {
+    "det_M": 1,
+    "det_A": 1,
+    "charpoly_M": "(lambda**2 + 4*lambda + 1)*(lambda**2 + 14*lambda + 1)",
+    "eigenvalues_M": [
+      "-7 - 4*sqrt(3)",
+      "-7 + 4*sqrt(3)",
+      "-2 - sqrt(3)",
+      "-2 + sqrt(3)"
+    ],
+    "log_abs_eigs_exact_ratio": "log(4*sqrt(3) + 7)/log(sqrt(3) + 2)",
+    "ratio_is_exactly_2": true,
+    "identity_(2+sqrt3)^2_equals_7+4sqrt3": true,
+    "rho_A": "15*sqrt(3) + 26",
+    "rho_A_float": 51.98076211353316,
+    "log_rho_A_float": 3.95087369077445,
+    "normalized_to_log_rho": [
+      0.6666666666666666,
+      0.3333333333333333,
+      -0.3333333333333333,
+      -0.6666666666666666
+    ],
+    "normalized_are_plus_minus_2_3_and_1_3": true,
+    "scaled_2_1_by_EKZ_sum_6_7": [
+      "4/7",
+      "2/7"
+    ],
+    "scaled_floats": [
+      0.5714285714285714,
+      0.2857142857142857
+    ],
+    "ratio_exactness_note": "sympy.simplify left the ratio as a log quotient, which is why an earlier equality-to-2 check failed. The identity (2+sqrt(3))^2 = 7+4*sqrt(3) holds exactly, so log|lambda_max| / log|lambda_2| = 2 exactly. Normalized exponents are exactly plus or minus 2/3 and 1/3."
+  },
+  "step3_connection_test": {
+    "decision_rule": "The Prym ratios inform the zeta average only if a pre-registered leading-density alternative that inserts 6/7, 4/7, 2/7, or 1/7 into the coefficient of T log(T/(2 pi e)) has RMS residual on the first 1000 zeros less than or equal to the control N_sm RMS. Constant-term swaps are reported and are not used as a pass.",
+    "control_rms": 0.25917081661005253,
+    "control_max_abs": 0.7342587270896956,
+    "control_mean": -0.00017376064133892854,
+    "leading_density": {
+      "control_1_over_2pi": {
+        "coefficient": 0.15915494309189535,
+        "rms": 0.2591708166100522,
+        "max_abs": 0.734258727089582,
+        "mean": -0.00017376064135284653
+      },
+      "six_sevenths": {
+        "coefficient": 0.8571428571428571,
+        "rms": 2528.699247728904,
+        "max_abs": 4379.11454974757,
+        "mean": -2188.9572498997027
+      },
+      "four_sevenths": {
+        "coefficient": 0.5714285714285714,
+        "rms": 1493.6020013068855,
+        "max_abs": 2586.5346998317136,
+        "mean": -1292.9298332664682
+      },
+      "two_sevenths": {
+        "coefficient": 0.2857142857142857,
+        "rms": 458.5047964431325,
+        "max_abs": 793.9548499158568,
+        "mean": -396.9024166332341
+      },
+      "one_seventh": {
+        "coefficient": 0.14285714285714285,
+        "rms": 59.044473423869874,
+        "max_abs": 102.3350750420716,
+        "mean": 51.111291683382944
+      },
+      "six_sevenths_over_2pi": {
+        "coefficient": 0.136418522650196,
+        "rms": 82.37040571841067,
+        "max_abs": 142.73116799689058,
+        "mean": 71.30342249087889
+      },
+      "four_sevenths_over_2pi": {
+        "coefficient": 0.09094568176679733,
+        "rms": 247.1109787131282,
+        "max_abs": 428.029111997927,
+        "mean": 213.91061499391924
+      },
+      "two_sevenths_over_2pi": {
+        "coefficient": 0.04547284088339867,
+        "rms": 411.85176916315606,
+        "max_abs": 713.3270559989635,
+        "mean": 356.5178074969596
+      },
+      "one_seventh_over_2pi": {
+        "coefficient": 0.022736420441699334,
+        "rms": 494.22217797911617,
+        "max_abs": 855.9760279994817,
+        "mean": 427.8214037484798
+      }
+    },
+    "constant_term_sanity_only": {
+      "control_7_8": {
+        "constant": 0.875,
+        "rms": 0.25917081661005253,
+        "max_abs": 0.7342587270896956,
+        "mean": -0.00017376064133892854
+      },
+      "six_sevenths": {
+        "constant": 0.8571428571428571,
+        "rms": 0.2597733319572101,
+        "max_abs": 0.752115869946806,
+        "mean": 0.017683382215793624
+      },
+      "four_sevenths": {
+        "constant": 0.5714285714285714,
+        "rms": 0.399023341290938,
+        "max_abs": 1.0378301556611405,
+        "mean": 0.30339766793010037
+      },
+      "two_sevenths": {
+        "constant": 0.2857142857142857,
+        "rms": 0.6436010999961302,
+        "max_abs": 1.3235444413753612,
+        "mean": 0.5891119536443543
+      },
+      "one_seventh": {
+        "constant": 0.14285714285714285,
+        "rms": 0.7764974180400247,
+        "max_abs": 1.4664015842325853,
+        "mean": 0.7319690965015284
+      }
+    },
+    "best_leading_alternative": "one_seventh",
+    "best_leading_alternative_rms": 59.044473423869874,
+    "informs_the_average": false,
+    "decision": "stay in the calculator",
+    "note": "Even inside the Prym notes, the exact 2:1 ratio is a property of special closed geodesics, not of the measure average. The conjectured Prym average is 4/7 and 2/7, scaled from that ratio by the EKZ sum 6/7. That average is a pair of Lyapunov exponents on a genus-4 translation surface, not a density of zeta zeros."
+  },
+  "step4_calculator": {
+    "role": "The Prym / discriminant-12 (and the recorded D=5 X(1,1) survey) calculator supplies the Lyapunov numbers and the known EKZ sum. The test of a connection to the height measure is the pre-registered comparison in step 3. The calculator is not a Riemann Hypothesis machine and does not prove RH.",
+    "what_was_run": "Exact linear algebra on the recorded example matrix M+ and A, plus the step-3 residual test on the first 1000 zeros. The 8095-map enumeration script and the full list of 20 geodesics are not in the on-box data (only summary counts and one worked example), so that survey was not re-run.",
+    "geometric_realization_status": "The recorded matrix has an exact 2:1 log-modulus ratio, checked here. A later procurement report on the box (prym-map-procurement/REPORT.md) proves that this matrix cannot arise as the H1+ action of an affine diffeomorphism of the certified Lanneau-Nguyen D=5 prototype under a real-multiplication hypothesis, and an exhaustive word search on that surface found 0 exact 2:1 hits. The 20-orbit count is therefore a recorded formal-monodromy claim, not a certified geometric count on that surface. That conflict is left standing; it does not change the step-3 decision.",
+    "is_an_RH_proof": false
+  },
+  "seconds": 186.1086449623108,
+  "step5_claim": {
+    "claim_file": "out/CLAIM.txt",
+    "claim": "The average-height equation is found if, and only if, there is a minimal relation, not equivalent to the Riemann-von Mangoldt formula or the explicit formula, that is built from the heights t_n and k log p defined in this report, that fails if the primes are removed, and that locates the first 1000 non-trivial zero ordinates to a pre-registered error; it is missed if every such candidate either reduces to one of those two known identities or fails that location test.\n",
+    "sha256": "d0a59770f542b002fefb880188f98de44b14f48e9d7eaa8714539899f51aa800",
+    "encoding": "utf-8, including a single trailing newline (472 bytes)",
+    "hashed_before_further_testing": true,
+    "under_this_claim_the_known_N_T_formula": "The Riemann-von Mangoldt formula, which was verified in step 1, is a miss for 'finding the equation' in the sense of the claim, because it reduces to a known identity. That is the honest outcome of the formalization."
+  }
+}

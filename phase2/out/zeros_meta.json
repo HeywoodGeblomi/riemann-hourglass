@@ -1,1 +1,5 @@
-$file:/workspace/publish_staging/addback/riemann-hourglass/phase2/out/zeros_meta.json
+{
+  "n": 1000,
+  "dps": 30,
+  "seconds": 185.8417091369629
+}
