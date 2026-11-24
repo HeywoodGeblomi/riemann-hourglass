@@ -18,9 +18,11 @@ Start with `ONEPAGER_riemann_hourglass.md` and `hourglass_figure.svg`. Then read
 
 A previous wording that included percents is under `prev_with_percent/`.
 
-## Files left out of this copy
+## Added data
 
-Binaries, not included (binary):
+Text under `phase2/out/` is in this repo (`CLAIM.txt`, `results.json`, `zeros_meta.json`). In `results.json` only, the author line was rewritten from a two-name form to `Heywood Geblomi`.
+
+These binaries could not be uploaded: the GitHub connector used here accepts text only, and `$file:` rejection for non-text files blocked them. I did not use `gh` or a raw API token as a workaround.
 
 - `ONEPAGER_riemann_hourglass.pdf`
 - `ONEPAGER_riemann_hourglass.png`
@@ -29,5 +31,5 @@ Binaries, not included (binary):
 - `phase2/ONEPAGER_phase2.png`
 - `prev_with_percent/ONEPAGER_riemann_hourglass.pdf`
 - `prev_with_percent/ONEPAGER_riemann_hourglass.png`
-
-Build outputs under `phase2/out/` (including `results.json`, `CLAIM.txt`, and `.npy` / `.npz` arrays) were stripped as build artifacts.
+- `phase2/out/plot_data.npz`
+- `phase2/out/zeros_t.npy`
